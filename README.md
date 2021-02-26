@@ -1,4 +1,4 @@
-#Shoutout to Shubham Tiwari (https://github.com/Killaskt) for helping me make this website! 
+# Shoutout to Shubham Tiwari (https://github.com/Killaskt) for helping me make this website! 
 
 # Getting Started with Create React App
 
