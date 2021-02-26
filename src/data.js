@@ -1,6 +1,6 @@
 import profile from "./res/qt.jpg";
-import aboutPic from './res/shubh_about_pic.jpeg'
-import logo from './res/shubhlogo-small.jpg';
+import aboutPic from './res/about-me-pic.jpg'
+//import logo from './res/shubhlogo-small.jpg';
 
 const data = {
     navToggle: {
@@ -558,7 +558,7 @@ const data = {
         },
     ],
     footer: {
-        footerLogo: logo,
+        //footerLogo: logo,
         mainStyle: {
             background: '#cde0f9',
             padding: '1em',
