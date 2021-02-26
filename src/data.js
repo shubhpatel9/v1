@@ -525,7 +525,7 @@ const data = {
                 {/* <li>Tested and optimized the PID control and Arduino code to handle up to 70 degrees of initial angle to the pendulum and hold position</li> */}
             </di>, 
             //GithubLink: 'https://github.com/shubhpatel9/Covid-19-tracker-website',
-            ImgLink: 'https://drive.google.com/file/d/1HSIXiB0NabAdRIMaseje92VpX7oil5hH/view?usp=sharing', 
+            //ImgLink: 'https://drive.google.com/file/d/1HSIXiB0NabAdRIMaseje92VpX7oil5hH/view?usp=sharing', 
             tags: ['NX10', ' ', 'SolidWorks', ' ', 'SPICE', ' ', 'EAGLE'],
             backgrounds: {
                 link: '#0a192f',
