@@ -218,8 +218,8 @@ const data = {
             iconColor: { background: '#0a192f', color: '#fff' },
             arrowColor: { borderRight: '7px solid  #0a192f' },
             //icon: <i class="fab fa-accessible-icon"></i>,
-            title: 'Electrical Engineer Intern in CSO Control Program',
-            location: 'Great Lakes Water Authority - Detroit, MI',
+            title: 'Engineer Intern',
+            location: 'Combine International - Troy, MI',
             text: 
             <di>
                 <li>Created 100+ data visualizations using a fast-photographic system called Vision360 that are used for product development</li>
