@@ -145,7 +145,7 @@ const data = {
         }
     },
     about: {
-        aboutText: "I'm a senior at Wayne State University pursuing Bachelors in Electrical and Computer Engineering along with a focus option in Computer Science. I expect to graduate in May '21.<br/><br/>I was born and raised in Mumbai, India, and moved to the US at the age of 16. After two years, I graduated from Stevenson High School as a Valedictorian and accepted scholarships to attend Wayne State University.",
+        aboutText: "I'm a senior at Wayne State University pursuing Bachelors in Electrical Engineering with a concentration in Computer Engineering along with a background in Computer Science. I expect to graduate in May '21.<br/><br/>I was born and raised in Mumbai, India, and moved to the US at the age of 16. After two years, I graduated from Stevenson High School as a Valedictorian and accepted scholarships to attend Wayne State University.",
         seemore: "At Wayne, I started to pursue Electrical and Computer Engineering. I joined various clubs and teams like Warrior Racing (SAE), Wayne Robotics Club, Warrior Data Science Team, and more for personal and professional growth while serving the community through <a target='_blank' href='https://tina98.github.io/HelloWorld/'>Hello World</a> and community service events through organizations like BAPS Charities, <a target='_blank' href='http://www.amusdetroit.org/'>AmeriCorps</a>, and volunteering at soup kitchens and homeless shelters in Detroit.<br/><br/>I enjoy playing soccer, binging tv shows and movies, playing video games, and dancing. I also danced with a competitive bollywood dance team called Detroit Kohinoor for 3 years.",
         aboutPic: aboutPic,
         aboutTextStyle: {
@@ -228,7 +228,7 @@ const data = {
             </di>,
         },
     ],
-    resumeLink: 'https://drive.google.com/file/d/1EmlmZhHfgn-nCrhYgzKyHiI0tJvc2dmQ/view?usp=sharing',
+    resumeLink: 'https://drive.google.com/file/d/1aOjKvzlFIflG4P7dprwhZGDn-5vdp8Sk/view?usp=sharing',
     projects: [
         {
             title: 'COVID 19 Tracker', 
