@@ -228,7 +228,7 @@ const data = {
             </di>,
         },
     ],
-    resumeLink: 'https://drive.google.com/file/d/1cXC8ISfH79G2V-JNe1RzJ01Pd6H3p4_Q/view?usp=sharing',
+    resumeLink: 'https://drive.google.com/file/d/12MryAn0zFZo-YEMjH_vYqvPWodQfQdjg/view?usp=sharing',
     projects: [
         {
             title: 'COVID 19 Tracker', 
