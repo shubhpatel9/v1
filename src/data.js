@@ -231,6 +231,47 @@ const data = {
     resumeLink: 'https://drive.google.com/file/d/12MryAn0zFZo-YEMjH_vYqvPWodQfQdjg/view?usp=sharing',
     projects: [
         {
+            title: 'Smart Medicine Box', 
+            desc: 
+            <di>
+                <li>Created a self-reporting medicine box using an Arduino MEGA2560, DS3231 timer, rotary encoder, LCD with I2C, MP3 module, GSM module, servo motors, Micro SD module, and IR sensor</li>
+                <li>Functionalities include: Reminding (via SMS and MP3), dispensing their scheduled dose, store the date and time of when the user takes each dose</li> 
+                <li>*Files, report, presentation, and poster can be accessed with the "image" symbol </li>
+            </di>, 
+            GithubLink: 'https://github.com/shubhpatel9/Smart-Medicine-Box',
+            ImgLink: 'https://drive.google.com/drive/folders/1NNmfwreAK9twRwX1XLnaPx2Oe0Jqxia3?usp=sharing', 
+            tags: ['Arduino', ' ', ' '],
+            backgrounds: {
+                link: '#0a192f',
+                title: '#0a192f',
+                desc: '#a8b2d1',
+                tags: '#0a192f'
+            },
+            LinkStyles: {
+                fontSize: '',
+                color: '#64ffda',
+                fontWeight: '',
+            },
+            TitleStyles: {
+                fontSize: '20px',
+                color: '#a8b2d1',
+                fontWeight: '500',
+            },
+            DescStyles: {
+                fontSize: '15px',
+                color: '#020c1b',
+                fontWeight: '500',
+                background: ''
+            },
+            TagsStyles: {
+                fontSize: '12px',
+                color: '#64ffda',
+                fontWeight: '200',
+                background: ''
+            },
+        },
+        
+        {
             title: 'COVID 19 Tracker', 
             desc: 
             <di>
