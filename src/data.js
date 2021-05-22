@@ -168,6 +168,27 @@ const data = {
         }
     },
     timelineItems: [
+         {
+            date: 'April 2021 - July 2021',
+            backgroundColor: '#0a192f',
+            textColor: {
+                color: '#8892b0',
+                background: '#0a192f'
+            },
+            iconColor: { background: '#0a192f', color: '#fff' },
+            arrowColor: { borderRight: '7px solid  #0a192f' },
+            //icon: <i class="fab fa-accessible-icon"></i>,
+            title: 'Engineer Intern in ER&D',
+            location: 'TATA Technologies - Detroit, MI ',
+            text:
+            <dl>
+                <li>Performing data ingest, analysis, and management along with calibrating sensor warning levels in accordance with the SAE system of automation levels as a part of the research team assisting Subaru in developing their ADAS system</li>
+                <li>Correcting any discrepancy in the levels marked by the ML algorithm as opposed to the “real” level as seen in the frames created by the sensors and the camera</li>
+                <li>Running simulations using Subaru’s proprietary simulation software to apply the corrected values of the SAE levels to the ML algorithm while manually calibrating the sensors’ accuracy as well as evaluating the ML algorithm’s predictive power</li>
+            </dl>
+            
+            //'Supported reporting and testing of emission impact on gasoline and diesel engine control software packages and powertrain solutions for Fiat Chrysler Automobiles\nAccelerated data analysis processes for multiple data sources (contract information of Bosch Projects) and formats on innovative emissions projects using Power BI, and SAP\n\nDeveloped embedded algorithms and assisted in implementing Digital, Analog, RF circuit designs for various sensors as well as managed tasks for system projects like preparing and supporting quality gates',
+        },
         {
             date: 'March 2020 - June 2020',
             backgroundColor: '#0a192f',
