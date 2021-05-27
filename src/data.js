@@ -1,5 +1,5 @@
 import profile from "./res/qt.jpg";
-import aboutPic from './res/about-me-pic.jpg'
+import aboutPic from './res/about_me_picture.jpg' 
 //import logo from './res/shubhlogo-small.jpg';
 
 const data = {
