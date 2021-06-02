@@ -59,7 +59,7 @@ const data = {
                     marginLeft: '20px',
                     boxShadow: '0 0 10px #0a192f'
                 },
-                onClick: () => window.location.href = "mailto:shubh9atel@gmail.com"
+                onClick: () => window.location.href = "mailto:pmshubh9@gmail.com"
             },
         ],
         mainStyle: {
@@ -131,7 +131,7 @@ const data = {
             {
                 symbol: <i className="far fa-envelope"></i>,
                 url: "",
-                onClick: () => window.location.href = "mailto:shubh9atel@gmail.com",
+                onClick: () => window.location.href = "mailto:pmshubh9@gmail.com",
                 iconColor: '#64ffda', 
             },
         ]
