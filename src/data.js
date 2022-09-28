@@ -203,7 +203,7 @@ const data = {
             location: 'Robert Bosch LLC - Farmington Hills, MI ',
             text:
             <dl>
-                <li>Supported reporting and testing of emission impact on gasoline and diesel engine control software packages and powertrain solutions for Fiat Chrysler Automobiles</li>
+                <li>Support reporting and testing of emission impact on gasoline and diesel engine control software packages and powertrain solutions for Fiat Chrysler Automobiles</li>
                 <li>Accelerated data analysis processes for multiple data sources (contract information of Bosch Projects) and formats on innovative emissions projects using Power BI, and SAP</li>
                 <li>Developed embedded algorithms and assisted in implementing Digital, Analog, RF circuit designs for various sensors as well as managed tasks for system projects like preparing and supporting quality gates </li>
             </dl>
