@@ -59,7 +59,7 @@ const data = {
                     marginLeft: '20px',
                     boxShadow: '0 0 10px #0a192f'
                 },
-                onClick: () => window.location.href = "mailto:pmshubh9@gmail.com"
+                onClick: () => window.location.href = "mailto:patel_shubh@outlook.com"
             },
         ],
         mainStyle: {
@@ -145,8 +145,8 @@ const data = {
         }
     },
     about: {
-        aboutText: "I'm a senior at Wayne State University pursuing Bachelors in Electrical Engineering with a concentration in Computer Engineering along with a background in Computer Science. I expect to graduate in May '21.<br/><br/>I was born and raised in Mumbai, India, and moved to the US at the age of 16. After two years, I graduated from Stevenson High School as a Valedictorian and accepted scholarships to attend Wayne State University.",
-        seemore: "At Wayne, I started to pursue Electrical and Computer Engineering. I joined various clubs and teams like Warrior Racing (SAE), Wayne Robotics Club, Warrior Data Science Team, and more for personal and professional growth while serving the community through <a target='_blank' href='https://tina98.github.io/HelloWorld/'>Hello World</a> and community service events through organizations like BAPS Charities, <a target='_blank' href='http://www.amusdetroit.org/'>AmeriCorps</a>, and volunteering at soup kitchens and homeless shelters in Detroit.<br/><br/>I enjoy playing soccer, binging tv shows and movies, playing video games, and dancing. I also danced with a competitive bollywood dance team called Detroit Kohinoor for 3 years.",
+        aboutText: "I am currently working as a system engineer at Aptiv. As a feature lead, I design and develop OTA (Over-the-air) programming systems for various vehicle architectures. Additionally, as a lead systems engineer, I manage the software component specifications and lead implementation for all the features in a vehicle line.",
+        seemore: "I was born and raised in Mumbai, India, and moved to the US at the age of 16. After two years, I graduated from Stevenson High School as a Valedictorian and accepted scholarships to attend Wayne State University.<br/><br/>At Wayne, I started to pursue Electrical and Computer Engineering. I joined various clubs and teams like Warrior Racing (SAE), Wayne Robotics Club, Warrior Data Science Team, and more for personal and professional growth while serving the community through <a target='_blank' href='https://tina98.github.io/HelloWorld/'>Hello World</a> and community service events through organizations like BAPS Charities, <a target='_blank' href='http://www.amusdetroit.org/'>AmeriCorps</a>, and volunteering at soup kitchens and homeless shelters in Detroit.<br/><br/>I enjoy playing soccer, binging tv shows and movies, playing video games, and dancing. I also danced with a competitive bollywood dance team called Detroit Kohinoor for 3 years.",
         aboutPic: aboutPic,
         aboutTextStyle: {
             fontWeight: '',
@@ -168,7 +168,28 @@ const data = {
         }
     },
     timelineItems: [
-         {
+        {
+            date: 'July 2021 - Present',
+            backgroundColor: '#0a192f',
+            textColor: {
+                color: '#8892b0',
+                background: '#0a192f'
+            },
+            iconColor: { background: '#0a192f', color: '#fff' },
+            arrowColor: { borderRight: '7px solid  #0a192f' },
+            //icon: <i class="fab fa-accessible-icon"></i>,
+            title: 'Lead Systems Engineer, Feature Lead',
+            location: 'Aptiv - Troy, MI ',
+            text:
+            <dl>
+                <li>Develop embedded hardware and software systems to enhance advanced driver-assistance systems (ADAS) features, active safety, and user experience</li>
+                <li>Lead the Aptiv Firmware Over the Air (FOTA) team to define, implement, and revise the functional specifications for delivering software files to multiple ECUs and update wirelessly</li>
+                <li>Design test cases for the FOTA system that analyzes and debugs functional inconsistencies, and improve the feature implementation by over 80% more success rate</li>
+            </dl>
+            
+            //'Supported reporting and testing of emission impact on gasoline and diesel engine control software packages and powertrain solutions for Fiat Chrysler Automobiles\nAccelerated data analysis processes for multiple data sources (contract information of Bosch Projects) and formats on innovative emissions projects using Power BI, and SAP\n\nDeveloped embedded algorithms and assisted in implementing Digital, Analog, RF circuit designs for various sensors as well as managed tasks for system projects like preparing and supporting quality gates',
+        }, 
+        {
             date: 'April 2021 - July 2021',
             backgroundColor: '#0a192f',
             textColor: {
@@ -178,13 +199,13 @@ const data = {
             iconColor: { background: '#0a192f', color: '#fff' },
             arrowColor: { borderRight: '7px solid  #0a192f' },
             //icon: <i class="fab fa-accessible-icon"></i>,
-            title: 'Engineer Intern in ER&D',
+            title: 'ADAS Engineer Intern in ER&D',
             location: 'TATA Technologies - Detroit, MI ',
             text:
             <dl>
-                <li>Performing data ingest, analysis, and management along with calibrating sensor warning levels in accordance with the SAE system of automation levels as a part of the research team assisting Subaru in developing their ADAS system</li>
-                <li>Correcting any discrepancy in the levels marked by the ML algorithm as opposed to the “real” level as seen in the frames created by the sensors and the camera</li>
-                <li>Running simulations using Subaru’s proprietary simulation software to apply the corrected values of the SAE levels to the ML algorithm while manually calibrating the sensors’ accuracy as well as evaluating the ML algorithm’s predictive power</li>
+                <li>Led data ingestion and analysis of sensor warning levels to develop the software for emergency braking and collision warning to comply with the SAE system of automation levels</li>
+                <li>Improved the machine learning algorithm’s predictive power by correcting the discrepancies in sensor values and applying the bug fixes for the errors recognized from the data collected</li>
+                <li>Executed vehicle simulations to learn the ideal calibration values for the sensors and upgrade the system’s coherency with the software algorithm</li>
             </dl>
             
             //'Supported reporting and testing of emission impact on gasoline and diesel engine control software packages and powertrain solutions for Fiat Chrysler Automobiles\nAccelerated data analysis processes for multiple data sources (contract information of Bosch Projects) and formats on innovative emissions projects using Power BI, and SAP\n\nDeveloped embedded algorithms and assisted in implementing Digital, Analog, RF circuit designs for various sensors as well as managed tasks for system projects like preparing and supporting quality gates',
@@ -203,9 +224,9 @@ const data = {
             location: 'Robert Bosch LLC - Farmington Hills, MI ',
             text:
             <dl>
-                <li>Support reporting and testing of emission impact on gasoline and diesel engine control software packages and powertrain solutions for Fiat Chrysler Automobiles</li>
-                <li>Accelerated data analysis processes for multiple data sources (contract information of Bosch Projects) and formats on innovative emissions projects using Power BI, and SAP</li>
-                <li>Developed embedded algorithms and assisted in implementing Digital, Analog, RF circuit designs for various sensors as well as managed tasks for system projects like preparing and supporting quality gates </li>
+                <li>Led the intern team for technical reporting of emissions impact from gasoline/diesel engine using control software packages</li>
+                <li>Managed data processing from multiple sources to maintain contract information using tools like Power BI and SAP</li>
+                <li>Conducted cost review for budgets varying from $100,000 to $1M along with planning and compiling summaries for management</li>
             </dl>
             
             //'Supported reporting and testing of emission impact on gasoline and diesel engine control software packages and powertrain solutions for Fiat Chrysler Automobiles\nAccelerated data analysis processes for multiple data sources (contract information of Bosch Projects) and formats on innovative emissions projects using Power BI, and SAP\n\nDeveloped embedded algorithms and assisted in implementing Digital, Analog, RF circuit designs for various sensors as well as managed tasks for system projects like preparing and supporting quality gates',
@@ -225,8 +246,8 @@ const data = {
             text: 
             <di>
                 <li>Reviewed, drafted, and modified 3094 feet worth of system/network and electrical drawings using AutoCAD to plan for maintenance and development of machinery while collaborating with 3+ vendors/contractors</li>
-                <li>Prepared and reviewed I&C and electrical design documents for water and wastewater industry: P&ID, loop drawings, network architecture, riser diagrams, and one-line diagrams</li>
-                <li>Assisted in a special projects team to operate and manage control systems functions to set up process control consoles and peripheral units in accordance with instructions and protocol of process control system administration </li>
+                <li>Prepared and reviewed I&C and electrical design documents like P&ID, loop drawings, riser diagrams, and one-line diagrams to support maintenance of various machines throughout the plant </li>
+                <li>Facilitated special projects team to analyze environmental data to mitigate emission levels</li>
             </di>,
         },
         {
@@ -243,20 +264,20 @@ const data = {
             location: 'Combine International - Troy, MI',
             text: 
             <di>
-                <li>Created 100+ data visualizations using a fast-photographic system called Vision360 that are used for product development</li>
-                <li>Collected, analyzed, and interpreted structural data for over 500 diamonds and other jewelry, and assisted with processing the materials to make a variety of lab-grown diamonds</li>
-                <li>Assisted with maintaining 50 diamond machines and its basic systems or components as well as monitored the processes and time required to make a variety of lab-grown diamonds</li>
+                <li>Created 100+ data visualizations using a fast-photographic system, Vision360, for product development and website content</li>
+                <li>Aided the maintenance, operations, and monitoring of 3 scientific machines used for growing diamonds</li>
+                <li>Packaged the raw diamonds after tending to the cleaning process for sales and collected the residue to maximize material usage</li>
             </di>,
         },
     ],
-    resumeLink: 'https://drive.google.com/file/d/12MryAn0zFZo-YEMjH_vYqvPWodQfQdjg/view?usp=sharing',
+    resumeLink: 'https://drive.google.com/file/d/1Z-AY6_EtyjOHxGg9rDutMUDSgb-SZylb/view?usp=sharing',
     projects: [
         {
             title: 'Smart Medicine Box', 
             desc: 
             <di>
                 <li>Created a self-reporting medicine box using an Arduino MEGA2560, DS3231 timer, rotary encoder, LCD with I2C, MP3 module, GSM module, servo motors, Micro SD module, and IR sensor</li>
-                <li>Functionalities include: Reminding (via SMS and MP3), dispensing their scheduled dose, store the date and time of when the user takes each dose</li> 
+                <li>Functionalities include - SMS & MP3 Reminders, dose dispensing at scheduled times, log date/time for adherence tracking</li> 
                 <li>*Files, report, presentation, and poster can be accessed with the "image" symbol </li>
             </di>, 
             GithubLink: 'https://github.com/shubhpatel9/Smart-Medicine-Box',
