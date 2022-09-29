@@ -59,7 +59,7 @@ const data = {
                     marginLeft: '20px',
                     boxShadow: '0 0 10px #0a192f'
                 },
-                onClick: () => window.location.href = "mailto:patel_shubh@outlook.com"
+                onClick: () => window.location.href = "mailto:pmshubh9@gmail.com"
             },
         ],
         mainStyle: {
@@ -172,7 +172,7 @@ const data = {
             date: 'July 2021 - Present',
             backgroundColor: '#0a192f',
             textColor: {
-                color: '#8892b0',
+                color: '#6473a1',
                 background: '#0a192f'
             },
             iconColor: { background: '#0a192f', color: '#fff' },
@@ -193,7 +193,7 @@ const data = {
             date: 'April 2021 - July 2021',
             backgroundColor: '#0a192f',
             textColor: {
-                color: '#8892b0',
+                color: '#6473a1',
                 background: '#0a192f'
             },
             iconColor: { background: '#0a192f', color: '#fff' },
@@ -214,7 +214,7 @@ const data = {
             date: 'March 2020 - June 2020',
             backgroundColor: '#0a192f',
             textColor: {
-                color: '#8892b0',
+                color: '#6473a1',
                 background: '#0a192f'
             },
             iconColor: { background: '#0a192f', color: '#fff' },
@@ -235,7 +235,7 @@ const data = {
             date: 'June 2019 - November 2019',
             backgroundColor: '#0a192f',
             textColor: {
-                color: '#8892b0',
+                color: '#6473a1',
                 background: '#0a192f'
             },
             iconColor: { background: '#0a192f', color: '#fff' },
@@ -254,7 +254,7 @@ const data = {
             date: 'May 2018 - August 2018',
             backgroundColor: '#0a192f',
             textColor: {
-                color: '#8892b0',
+                color: '#6473a1',
                 background: '#0a192f'
             },
             iconColor: { background: '#0a192f', color: '#fff' },
@@ -264,13 +264,13 @@ const data = {
             location: 'Combine International - Troy, MI',
             text: 
             <di>
-                <li>Created 100+ data visualizations using a fast-photographic system, Vision360, for product development and website content</li>
-                <li>Aided the maintenance, operations, and monitoring of 3 scientific machines used for growing diamonds</li>
-                <li>Packaged the raw diamonds after tending to the cleaning process for sales and collected the residue to maximize material usage</li>
+                <li>Created 100+ data visualizations using a fast-photographic system called Vision360 that are used for product development</li>
+                <li>Collected, analyzed, and interpreted structural data for over 500 diamonds and other jewelry, and assisted with processing the materials to make a variety of lab-grown diamonds</li>
+                <li>Assisted with maintaining 50 diamond machines and its basic systems or components as well as monitored the processes and time required to make a variety of lab-grown diamonds</li>
             </di>,
         },
     ],
-    resumeLink: 'https://drive.google.com/file/d/1Z-AY6_EtyjOHxGg9rDutMUDSgb-SZylb/view?usp=sharing',
+    resumeLink: 'https://drive.google.com/file/d/12MryAn0zFZo-YEMjH_vYqvPWodQfQdjg/view?usp=sharing',
     projects: [
         {
             title: 'Smart Medicine Box', 

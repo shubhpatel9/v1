@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Particles from 'react-particles-js'
+//import Particles from 'react-particles-js'
 import Button from '@material-ui/core/Button';
 
 // import {Button} from
@@ -11,7 +11,7 @@ const Welcome = () => {
 
     return (
         <div className="welcome" style={data.welcome.mainStyle}>
-        <Particles
+        {/* <Particles
             style={{
                 position: 'absolute',
                 top: 0,
@@ -20,7 +20,7 @@ const Welcome = () => {
                 zIndex: '0'
             }}
             params={data.welcome.particleStyles}
-        />
+        /> */}
 
             <div className="btnContainer">
                     {data.welcome.buttons.map((b, i) => 
