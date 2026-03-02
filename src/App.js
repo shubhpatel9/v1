@@ -8,8 +8,8 @@ import "./App.css";
 const  App = () => {
   return (
     <Switch>
-      {/* <Route path="/" component={FourOFour} /> */}
-      <Route path="/" component={Home} />
+      <Route exact path="/" component={Home} />
+      <Route component={FourOFour} />
     </Switch>
   )
 }

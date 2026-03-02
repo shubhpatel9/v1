@@ -17,8 +17,8 @@ const Projects = () => {
         return (
             <div className="project">
                 <div className="pad pad2 proj-symbols" style={{paddingTop: '0.3rem', background: proj.backgrounds.link}}>
-                    {proj?.GithubLink ? projectSymbol({styles: proj.LinkStyles,link: proj.GithubLink, icon: <i class="fab fa-github"></i>}) : <></>}
-                    {proj?.ImgLink ? projectSymbol({styles: proj.LinkStyles,link: proj.ImgLink, icon: <i class="far fa-image"></i>}) : <></>}
+                    {proj?.GithubLink ? projectSymbol({styles: proj.LinkStyles,link: proj.GithubLink, icon: <i className="fab fa-github" aria-label="GitHub repository"></i>}) : <></>}
+                    {proj?.ImgLink ? projectSymbol({styles: proj.LinkStyles,link: proj.ImgLink, icon: <i className="far fa-image" aria-label="View project"></i>}) : <></>}
                 </div>
                 <h1 className="align-center pad" style={{...proj.TitleStyles, background: proj.backgrounds.title}}>{proj.title}</h1>
                 <h4 className="pad3" style={{...proj.DescStyles, background: proj.backgrounds.desc}}>{proj.desc}</h4>

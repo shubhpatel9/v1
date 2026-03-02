@@ -117,22 +117,25 @@ const data = {
         },
         icons: [
             {
-                symbol: <i className="fab fa-github"></i>,
+                symbol: <i className="fab fa-github" aria-hidden="true"></i>,
                 url: "https://github.com/shubhpatel9",
                 onClick: () => {},
                 iconColor: '#64ffda',
+                label: 'GitHub profile',
             },
             {
-                symbol: <i className="fab fa-linkedin"></i>,
+                symbol: <i className="fab fa-linkedin" aria-hidden="true"></i>,
                 url: "https://www.linkedin.com/in/shubhpatel/",
                 onClick: () => {},
                 iconColor: '#64ffda',
+                label: 'LinkedIn profile',
             },
             {
-                symbol: <i className="far fa-envelope"></i>,
+                symbol: <i className="far fa-envelope" aria-hidden="true"></i>,
                 url: "",
                 onClick: () => window.location.href = "mailto:pmshubh9@gmail.com",
-                iconColor: '#64ffda', 
+                iconColor: '#64ffda',
+                label: 'Send email',
             },
         ]
     },
@@ -244,11 +247,11 @@ const data = {
             title: 'Electrical Engineer Intern in CSO Control Program',
             location: 'Great Lakes Water Authority - Detroit, MI',
             text: 
-            <di>
+            <ul>
                 <li>Reviewed, drafted, and modified 3094 feet worth of system/network and electrical drawings using AutoCAD to plan for maintenance and development of machinery while collaborating with 3+ vendors/contractors</li>
                 <li>Prepared and reviewed I&C and electrical design documents like P&ID, loop drawings, riser diagrams, and one-line diagrams to support maintenance of various machines throughout the plant </li>
                 <li>Facilitated special projects team to analyze environmental data to mitigate emission levels</li>
-            </di>,
+            </ul>,
         },
         {
             date: 'May 2018 - August 2018',
@@ -263,11 +266,11 @@ const data = {
             title: 'Engineer Intern',
             location: 'Combine International - Troy, MI',
             text: 
-            <di>
+            <ul>
                 <li>Created 100+ data visualizations using a fast-photographic system called Vision360 that are used for product development</li>
                 <li>Collected, analyzed, and interpreted structural data for over 500 diamonds and other jewelry, and assisted with processing the materials to make a variety of lab-grown diamonds</li>
                 <li>Assisted with maintaining 50 diamond machines and its basic systems or components as well as monitored the processes and time required to make a variety of lab-grown diamonds</li>
-            </di>,
+            </ul>,
         },
     ],
     resumeLink: 'https://drive.google.com/file/d/12MryAn0zFZo-YEMjH_vYqvPWodQfQdjg/view?usp=sharing',
@@ -275,11 +278,11 @@ const data = {
         {
             title: 'Smart Medicine Box', 
             desc: 
-            <di>
+            <ul>
                 <li>Created a self-reporting medicine box using an Arduino MEGA2560, DS3231 timer, rotary encoder, LCD with I2C, MP3 module, GSM module, servo motors, Micro SD module, and IR sensor</li>
                 <li>Functionalities include - SMS & MP3 Reminders, dose dispensing at scheduled times, log date/time for adherence tracking</li> 
                 <li>*Files, report, presentation, and poster can be accessed with the "image" symbol </li>
-            </di>, 
+            </ul>, 
             GithubLink: 'https://github.com/shubhpatel9/Smart-Medicine-Box',
             ImgLink: 'https://drive.google.com/drive/folders/1NNmfwreAK9twRwX1XLnaPx2Oe0Jqxia3?usp=sharing', 
             tags: ['Arduino', ' ', ' '],
@@ -316,10 +319,10 @@ const data = {
         {
             title: 'COVID 19 Tracker', 
             desc: 
-            <di>
+            <ul>
                 <li>Developed a website for the Wayne State University Hackathon to track the number of deaths due to COVID-19 in United States</li>
                 <li>Achieved 3rd place win among 50+ students and over 20 teams participating in the competition</li>
-            </di>, 
+            </ul>, 
             GithubLink: 'https://github.com/shubhpatel9/Covid-19-tracker-website',
             ImgLink: 'https://covid-19-tracker-theta.vercel.app/', 
             tags: ['JavaScript',' ', 'CSS',' ','HTML',' ', 'Node.js',],
@@ -356,11 +359,11 @@ const data = {
         {
             title: 'Inverted Pendulum', 
             desc: 
-            <di>
+            <ul>
                 <li>Created a digital circuit based PID controlled propeller actuated self-balancing inverted pendulum</li>
                 <li>Utilizing two propellers, Arduino UNO microcontroller, angle sensor, DC motors, and L298N H Bridge DC stepper in Linear Signals and Systems</li> 
                 {/* <li>Tested and optimized the PID control and Arduino code to handle up to 70 degrees of initial angle to the pendulum and hold position</li> */}
-            </di>, 
+            </ul>, 
             //GithubLink: 'https://github.com/shubhpatel9/Covid-19-tracker-website',
             ImgLink: 'https://drive.google.com/file/d/19Ql5w-FwAErAjAd7kg9ICbYBqmwzetOI/view?usp=sharing', 
             tags: ['Arduino', ' ', 'PID'],
@@ -397,11 +400,11 @@ const data = {
         {
             title: 'Automatic Wiper Controller', 
             desc: 
-            <di>
+            <ul>
                 <li>Designed a capacitive rain sensor for automatic wiper control on the windshield of a car</li>
                 <li>Utilizing four primary components: capacitance monitoring circuit, microcontroller, voltage regulator, sensor traces, and placing them on a stack of two-layer PCB which can then be placed in the interior of the car</li> 
                 {/* <li>Tested and optimized the PID control and Arduino code to handle up to 70 degrees of initial angle to the pendulum and hold position</li> */}
-            </di>, 
+            </ul>, 
             //GithubLink: 'https://github.com/shubhpatel9/Covid-19-tracker-website',
             ImgLink: 'https://drive.google.com/file/d/1HSIXiB0NabAdRIMaseje92VpX7oil5hH/view?usp=sharing', 
             tags: ['Multisim', ' ', 'Altium', ' ', 'LabView', ' ', 'Oscilloscope','','Function Generator'],
@@ -438,11 +441,11 @@ const data = {
         {
             title: '32-Bit Register CPU', 
             desc: 
-            <di>
+            <ul>
                 <li>Designed up a 32-bit register CPU which runs MIPS instruction set architecture</li>
                 <li>Sped up the CPU by implementing the pipelining approach and designing the processor as a Moore state machine</li> 
                 <li>Utilizing a testbench in Verilog for exercising and verifying the functional correctness of the CPU logic</li>
-            </di>, 
+            </ul>, 
             GithubLink: 'https://github.com/shubhpatel9/32-bit-register-CPU',
             //ImgLink: 'https://drive.google.com/file/d/1HSIXiB0NabAdRIMaseje92VpX7oil5hH/view?usp=sharing', 
             tags: ['Verilog HDL', ' ', 'MIPS', ' ', 'Assembly'],
@@ -479,11 +482,11 @@ const data = {
         {
             title: 'Multithreading Server', 
             desc: 
-            <di>
+            <ul>
                 <li>Created a multithreaded server capable of handling multiple clients, each of them working on a different database simultaneously as well as supporting both Verbose and Silent Modes</li>
                 <li>Implemented the server to handle multiple clients sending compressed files and uncompressing them when received</li> 
                 {/* <li>Tested the functionality of the server and the code by uploading pictures of the university logo in PNG and JPEG format from different devices at the same time</li> */}
-            </di>, 
+            </ul>, 
             GithubLink: 'https://github.com/shubhpatel9/Multithreaded-Server',
             //ImgLink: 'https://drive.google.com/file/d/1HSIXiB0NabAdRIMaseje92VpX7oil5hH/view?usp=sharing', 
             tags: ['Python 3.7x', ' ', 'Socket Programming'],
@@ -520,10 +523,10 @@ const data = {
         {
             title: 'Sorting Algorithms', 
             desc: 
-            <di>
+            <ul>
                 <li>Created a sorting algorithm to implement and compare four types of sorting method (bubble, insertion, quick, merge) compatible with any number of data points from STL containers (Vector, list, set)</li>
                 <li>Used the Big-O complexity factor to determine with STL container to use with which sorting method depending on the size of “n” (number of data points)</li> 
-            </di>, 
+            </ul>, 
 
             GithubLink: 'https://github.com/shubhpatel9/Sorting-Algorithm',
             //ImgLink: 'https://drive.google.com/file/d/1HSIXiB0NabAdRIMaseje92VpX7oil5hH/view?usp=sharing', 
@@ -561,10 +564,10 @@ const data = {
         {
             title: 'Digital Lock', 
             desc: 
-            <di>
+            <ul>
                 <li>Created a digital numeric lock (4 digit) simulator on a Nexys 3 board (FPGA)</li>
                 <li>Organized six states using flip flops and different gates to enable the user to set a passcode and receive three tries to input the correct sequence of digits and unlock the device</li> 
-            </di>, 
+            </ul>, 
 
             //GithubLink: 'https://github.com/shubhpatel9/Covid-19-tracker-website',
             ImgLink: 'https://drive.google.com/file/d/1UqPasuYs0pLfDOhz4yXV40C3fh3GefoG/view?usp=sharing', 
@@ -602,11 +605,11 @@ const data = {
         {
             title: 'Drone', 
             desc: 
-            <di>
+            <ul>
                 <li>Led a team of 4 students to design and 3D print the parts to build a drone for a course project</li>
                 <li>Programmed the PCB to work with a generic control unit provided by the insructor and the purchased motors</li> 
                 {/* <li>Tested and optimized the PID control and Arduino code to handle up to 70 degrees of initial angle to the pendulum and hold position</li> */}
-            </di>, 
+            </ul>, 
             //GithubLink: 'https://github.com/shubhpatel9/Covid-19-tracker-website',
             //ImgLink: 'https://drive.google.com/file/d/1HSIXiB0NabAdRIMaseje92VpX7oil5hH/view?usp=sharing', 
             tags: ['NX10', ' ', 'SolidWorks', ' ', 'SPICE', ' ', 'EAGLE'],

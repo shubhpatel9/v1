@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <button style={data.navToggle.buttonStyle} className="navButton" style={{left: active ? '300px' : '0px'}} onClick={Slide}><i style={data.navToggle.iconStyle} className="fas fa-bars"></i></button>
+      <button style={{...data.navToggle.buttonStyle, left: active ? '300px' : '0px'}} className="navButton" aria-label={active ? 'Close navigation menu' : 'Open navigation menu'} onClick={Slide}><i style={data.navToggle.iconStyle} className="fas fa-bars" aria-hidden="true"></i></button>
       <Left active={active}/>
       <div className="containRest" style={{left: active ? '300px' : '0px'}}>
         <Welcome id={data.nav.navLinks[0].link}/>

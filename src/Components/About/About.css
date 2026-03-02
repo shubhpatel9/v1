@@ -39,6 +39,13 @@
     align-items: center;
     /* justify-content: center; */
     cursor: pointer;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 0;
+    text-align: left;
 }
 
 .seemoretext {

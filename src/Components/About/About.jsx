@@ -19,9 +19,9 @@ const About = () => {
             <SectionTitle title="About"/>
             <div className="about-content">
                 <div className="about-text">
-                    <h3 style={data.about.aboutTextStyle} dangerouslySetInnerHTML={{ __html: data.about.aboutText }}></h3>
+                    <h3 style={data.about.aboutTextStyle}>{data.about.aboutText}</h3>
                     <br />
-                    {!seeMore ? <h3 className="seemore" style={data.about.seeMoreButtonStyle} onClick={updateMore}>See More <i className="fas fa-sort-down"></i></h3> : ''}
+                    {!seeMore ? <button className="seemore" style={data.about.seeMoreButtonStyle} onClick={updateMore} aria-expanded={seeMore}>See More <i className="fas fa-sort-down" aria-hidden="true"></i></button> : ''}
                     <Collapse isOpened={seeMore}>
                         <h3 className="seemoretext" style={data.about.seeMoreTextStyle} onClick={updateMore} dangerouslySetInnerHTML={{ __html: data.about.seemore }}></h3>
                     </Collapse>
