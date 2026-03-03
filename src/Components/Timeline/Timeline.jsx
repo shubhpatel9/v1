@@ -1,39 +1,61 @@
-import React from 'react';
+import React, { useState } from "react";
+import data from "../../data";
+import "./Timeline.css";
 
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+export default function Timeline() {
+  const [active, setActive] = useState(0);
+  const job = data.experience[active];
 
-import SectionTitle from './../SectionTitle/SectionTitle.jsx';
+  return (
+    <div className="timeline">
+      <div className="timeline-inner">
+        <h2 className="section-label">
+          <span className="section-num">02.</span>
+          Experience
+        </h2>
 
-import data from './../../data';
-
-
-
-import {Timeline, TimelineItem, CircularProgress} from 'material-timeline';
-
-const TimeL = () => {
-
-    return (
-        <div className="timeline__" style={{zIndex: '2'}} id={data.nav.navLinks[2].link}>
-            <SectionTitle title="Timeline"/>
-            <VerticalTimeline>
-                {data.timelineItems.map((items, i) => 
-                    <VerticalTimelineElement
-                        className="vertical-timeline-element--work"
-                        contentStyle={items.textColor}
-                        contentArrowStyle={items.arrowColor}
-                        date={items.date}
-                        iconStyle={items.iconColor}
-                        icon={items.icon}
-                    >
-                        <h3 className="vertical-timeline-element-title">{items.title}</h3>
-                        <h4 className="vertical-timeline-element-subtitle">{items.location}</h4>
-                        <p>{items.text}</p>
-                    </VerticalTimelineElement>
-                )}
-                </VerticalTimeline>
+        {/* company tab strip */}
+        <div className="tl-tabs" role="tablist" aria-label="Work experience">
+          {data.experience.map((exp, i) => (
+            <button
+              key={i}
+              className={`tl-tab${active === i ? " tl-tab--active" : ""}`}
+              onClick={() => setActive(i)}
+              role="tab"
+              aria-selected={active === i}
+              aria-controls={`tl-panel-${i}`}
+              id={`tl-tab-${i}`}
+            >
+              <span className="tab-company">{exp.company}</span>
+              <span className="tab-date">{exp.date}</span>
+            </button>
+          ))}
         </div>
-    )
-}
 
-export default TimeL;
+        {/* job detail panel */}
+        <div
+          className="tl-panel"
+          key={active}
+          role="tabpanel"
+          id={`tl-panel-${active}`}
+          aria-labelledby={`tl-tab-${active}`}
+        >
+          <h3 className="job-title">{job.title}</h3>
+          <p className="job-company">
+            {job.company}&nbsp;·&nbsp;{job.location}
+          </p>
+          <p className="job-date">{job.date}</p>
+
+          <ul className="job-bullets">
+            {job.bullets.map((bullet, i) => (
+              <li key={i} className="job-bullet">
+                <span className="bullet-marker" aria-hidden="true">▹</span>
+                {bullet}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}

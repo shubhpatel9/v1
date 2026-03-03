@@ -1,35 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import data from "../../data";
+import "./About.css";
 
-import {Collapse} from 'react-collapse';
+export default function About() {
+  const [expanded, setExpanded] = useState(false);
 
-import SectionTitle from  './../SectionTitle/SectionTitle.jsx';
+  return (
+    <div className="about">
+      <div className="about-inner">
+        <div className="about-text">
+          <h2 className="section-label">
+            <span className="section-num">01.</span>
+            About Me
+          </h2>
 
-import data from './../../data'
+          <p className="about-bio">{data.bio}</p>
 
-import './About.css'
+          {expanded && (
+            <p className="about-bio about-bio--ext">{data.extendedBio}</p>
+          )}
 
-const About = () => {
+          <button
+            className="about-toggle"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+          >
+            {expanded ? "Show less ↑" : "Read more ↓"}
+          </button>
 
-    const [seeMore, setSeeMore] = useState(false);
-
-    const updateMore = () => setSeeMore(!seeMore)
-
-    return (
-        <div className="about">
-            <SectionTitle title="About"/>
-            <div className="about-content">
-                <div className="about-text">
-                    <h3 style={data.about.aboutTextStyle}>{data.about.aboutText}</h3>
-                    <br />
-                    {!seeMore ? <button className="seemore" style={data.about.seeMoreButtonStyle} onClick={updateMore} aria-expanded={seeMore}>See More <i className="fas fa-sort-down" aria-hidden="true"></i></button> : ''}
-                    <Collapse isOpened={seeMore}>
-                        <h3 className="seemoretext" style={data.about.seeMoreTextStyle} onClick={updateMore} dangerouslySetInnerHTML={{ __html: data.about.seemore }}></h3>
-                    </Collapse>
-                </div>
-                <img className="about-pic" src={data.about.aboutPic} alt="shubh"/>
-            </div>
+          <div className="about-facts" aria-label="Quick facts">
+            {data.facts.map((fact, i) => (
+              <span key={i} className="fact-pill">
+                {fact}
+              </span>
+            ))}
+          </div>
         </div>
-    )
-}
 
-export default About;
+        <div className="about-photo-col">
+          <div className="about-photo-frame">
+            <img
+              src={data.aboutPhoto}
+              alt="Shubh Patel"
+              className="about-photo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

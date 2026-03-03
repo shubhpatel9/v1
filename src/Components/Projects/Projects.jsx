@@ -1,57 +1,83 @@
-import React from 'react';
+import React, { useState } from "react";
+import data from "../../data";
+import "./Projects.css";
 
-import './Projects.css';
+export default function Projects() {
+  const [showAll, setShowAll] = useState(false);
+  const visible = showAll ? data.projects : data.projects.slice(0, 6);
 
-import data from './../../data.js';
-import SectionTitle from '../SectionTitle/SectionTitle';
+  return (
+    <div className="projects">
+      <div className="projects-inner">
+        <h2 className="section-label">
+          <span className="section-num">03.</span>
+          Projects
+        </h2>
 
-const Projects = () => {
-
-    const projectSymbol = (sy) => {
-        return (
-            <a style={sy.styles} target="_blank" rel='noreferrer' href={sy.link}>{sy.icon}</a>
-        )
-    }
-
-    const ProjectGen = ({proj}) => {
-        return (
-            <div className="project">
-                <div className="pad pad2 proj-symbols" style={{paddingTop: '0.3rem', background: proj.backgrounds.link}}>
-                    {proj?.GithubLink ? projectSymbol({styles: proj.LinkStyles,link: proj.GithubLink, icon: <i className="fab fa-github" aria-label="GitHub repository"></i>}) : <></>}
-                    {proj?.ImgLink ? projectSymbol({styles: proj.LinkStyles,link: proj.ImgLink, icon: <i className="far fa-image" aria-label="View project"></i>}) : <></>}
+        <div className="proj-grid">
+          {visible.map((proj, i) => (
+            <article className="proj-card" key={i}>
+              <div className="proj-card-top">
+                <i className="far fa-folder-open proj-icon" aria-hidden="true"></i>
+                <div className="proj-links">
+                  {proj.github && (
+                    <a
+                      href={proj.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${proj.title} on GitHub`}
+                    >
+                      <i className="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                  )}
+                  {proj.link && (
+                    <a
+                      href={proj.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`View ${proj.title}`}
+                    >
+                      <i className="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </a>
+                  )}
                 </div>
-                <h1 className="align-center pad" style={{...proj.TitleStyles, background: proj.backgrounds.title}}>{proj.title}</h1>
-                <h4 className="pad3" style={{...proj.DescStyles, background: proj.backgrounds.desc}}>{proj.desc}</h4>
-               <div className="pad tag-cont" style={{paddingBottom: '0.5rem', background: proj.backgrounds.tags}}>
-                    {proj?.tags ? proj.tags.map((tag, i) => <p key={i} style={proj.TagsStyles}>{tag}</p> ) : <></>}
-                </div>
-            </div>
-        )
-    }
+              </div>
 
-    return (
-        <div className="projects-cont" id={data.nav.navLinks[3].link}>
-            <SectionTitle title="Projects"/>
-            <div className="project-cont">
-                {data.projects.map((key, i) => {
-                    return (
-                        <>
-                            <ProjectGen proj={key} key={i}/>
-                            
-                            {/* This line places Vertical Rule after every odd element */}
-                            {i % 2 === 0 ?
-                                <div key={i + 10} className="vert-cont">
-                                    <div className="vertical-rule"></div>
-                                </div>
-                            :
-                                <></>
-                            }
-                        </>
-                    )
-                })}
-            </div>
+              <h3 className="proj-title">{proj.title}</h3>
+              <p className="proj-desc">{proj.shortDesc}</p>
+
+              <footer className="proj-tags">
+                {proj.tags.map((tag, j) => (
+                  <span key={j} className="proj-tag">
+                    {tag}
+                  </span>
+                ))}
+              </footer>
+            </article>
+          ))}
         </div>
-    )
-}
 
-export default Projects;
+        {data.projects.length > 6 && (
+          <button
+            className="show-more"
+            onClick={() => setShowAll((v) => !v)}
+          >
+            {showAll
+              ? "Show less ↑"
+              : `Show all ${data.projects.length} projects ↓`}
+          </button>
+        )}
+
+        <footer className="site-footer">
+          <p>
+            Designed &amp; built by{" "}
+            <a href={data.github} target="_blank" rel="noreferrer">
+              Shubh Patel
+            </a>{" "}
+            · Built with React
+          </p>
+        </footer>
+      </div>
+    </div>
+  );
+}

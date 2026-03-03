@@ -1,0 +1,87 @@
+.topbar {
+  height: var(--topbar-h);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.topbar-name {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 200ms var(--ease);
+}
+
+.topbar-name:hover {
+  color: var(--accent);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.topbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topbar-icons a {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  transition: color 200ms var(--ease), transform 200ms var(--ease);
+  display: flex;
+}
+
+.topbar-icons a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.topbar-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  background: var(--text-faint);
+  padding: 0;
+  transition: background 250ms var(--ease), transform 250ms var(--ease);
+}
+
+.dot--active {
+  background: var(--accent);
+  transform: scale(1.4);
+}
+
+.dot:hover:not(.dot--active) {
+  background: var(--text-muted);
+  transform: scale(1.15);
+}
+
+@media (max-width: 767px) {
+  .topbar {
+    padding: 0 1rem;
+  }
+
+  .topbar-dots {
+    display: none;
+  }
+}
