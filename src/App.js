@@ -12,58 +12,72 @@ const SECTION_COUNT = 4;
 
 function Portfolio() {
   const [active, setActive] = useState(0);
+  const activeRef = useRef(0);
   const containerRef = useRef(null);
-  const sectionRefs = useRef([]);
 
   const navigateTo = useCallback((idx) => {
-    const el = sectionRefs.current[idx];
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+    const container = containerRef.current;
+    if (container) {
+      container.scrollTo({ left: idx * container.clientWidth, behavior: "smooth" });
     }
   }, []);
 
-  // sync dot indicator with scroll position
+  // sync dot/nav indicator with scroll position
+  // use scrollend for precision (modern browsers); debounced scroll as fallback (Safari)
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-    const onScroll = () => {
+
+    const sync = () => {
       const idx = Math.round(container.scrollLeft / container.clientWidth);
+      activeRef.current = idx;
       setActive(idx);
     };
-    container.addEventListener("scroll", onScroll, { passive: true });
-    return () => container.removeEventListener("scroll", onScroll);
+
+    const supportsScrollEnd = "onscrollend" in window;
+    if (supportsScrollEnd) {
+      container.addEventListener("scrollend", sync, { passive: true });
+      return () => container.removeEventListener("scrollend", sync);
+    } else {
+      let t;
+      const onScroll = () => {
+        clearTimeout(t);
+        t = setTimeout(sync, 80);
+      };
+      container.addEventListener("scroll", onScroll, { passive: true });
+      return () => {
+        container.removeEventListener("scroll", onScroll);
+        clearTimeout(t);
+      };
+    }
   }, []);
 
-  // arrow key navigation
+  // arrow key navigation — reads activeRef to avoid stale closure
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "ArrowRight")
-        navigateTo(Math.min(active + 1, SECTION_COUNT - 1));
+        navigateTo(Math.min(activeRef.current + 1, SECTION_COUNT - 1));
       if (e.key === "ArrowLeft")
-        navigateTo(Math.max(active - 1, 0));
+        navigateTo(Math.max(activeRef.current - 1, 0));
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [active, navigateTo]);
-
-  const setRef = (i) => (el) => {
-    sectionRefs.current[i] = el;
-  };
+  }, [navigateTo]);
 
   return (
     <div className="site">
       <TopBar active={active} total={SECTION_COUNT} onNavigate={navigateTo} />
       <div className="sections-container" ref={containerRef}>
-        <section className="section" ref={setRef(0)}>
+        <section className="section">
           <Hero onNavigate={navigateTo} />
         </section>
-        <section className="section" ref={setRef(1)}>
+        <section className="section">
           <About />
         </section>
-        <section className="section" ref={setRef(2)}>
+        <section className="section">
           <Timeline />
         </section>
-        <section className="section" ref={setRef(3)}>
+        <section className="section">
           <Projects />
         </section>
       </div>

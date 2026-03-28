@@ -2,7 +2,7 @@ import React from "react";
 import data from "../../data";
 import "./TopBar.css";
 
-const NAV_LABELS = ["Welcome", "About", "Timeline", "Projects"];
+const NAV_LABELS = ["Welcome", "About", "Experience", "Projects"];
 
 export default function TopBar({ active, onNavigate }) {
   return (
@@ -38,17 +38,20 @@ export default function TopBar({ active, onNavigate }) {
           </a>
         </div>
 
-        <div className="topbar-dots" role="tablist" aria-label="Section navigation">
+        <div className="topbar-divider" aria-hidden="true" />
+
+        <div className="topbar-nav" role="tablist" aria-label="Section navigation">
           {NAV_LABELS.map((label, i) => (
             <button
               key={i}
-              className={`dot${active === i ? " dot--active" : ""}`}
+              className={`nav-link${active === i ? " nav-link--active" : ""}`}
               onClick={() => onNavigate(i)}
               role="tab"
               aria-selected={active === i}
               aria-label={`Go to ${label}`}
-              title={label}
-            />
+            >
+              {label}
+            </button>
           ))}
         </div>
       </nav>
